@@ -7,13 +7,16 @@ module Carriage
         params = {}
         index = 0
 
+
         while index < items.size
-          if items[index][:asin]
-            params[:"ASIN.#{index + 1}"] = items[index][:asin]
+          item = items[index].transform_keys(&:upcase)
+
+          if item[:ASIN]
+            params[:"ASIN.#{index + 1}"] = item[:ASIN]
           else
-            params[:"OfferListingId.#{index + 1}"] = items[index][:offerlistingid]
+            params[:"OfferListingId.#{index + 1}"] = item[:OFFERLISTINGID]
           end
-          params[:"Quantity.#{index + 1}"] = items[index].fetch(:quantity, 1)
+          params[:"Quantity.#{index + 1}"] = item.fetch(:QUANTITY, 1)
           index += 1
         end
 
