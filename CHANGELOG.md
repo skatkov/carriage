@@ -4,8 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+##[0.3.0]
+
 ### Added
 - Support for Amazon locales
+- Support for OfferListingId
 
 ## [0.2.0]
 ### Added
