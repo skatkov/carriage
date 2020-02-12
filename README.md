@@ -52,6 +52,7 @@ Carriage.build(items, tag: 'my_attribution_tag', locale: :uk)
 * Carriage.build also requires `:tag` attribute and defaults to `locale: :us` if nothing else was provided.
 ### Locale
 All locale are based on a two letter country codes - **ISO 3166-1 alpha-2**. Here is an exact mapping:
+
 https://github.com/skatkov/carriage/blob/master/lib/carriage/locale.rb#L7-L23
 
 ## Getting help
