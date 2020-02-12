@@ -4,12 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
-- Adding support for Amazon locales support
+### Added
+- Support for Amazon locales
 
 ## [0.2.0]
 ### Added
 - Set default quantity for a product
-- Write down regions and respective hosts associated with them
+- Write down locales and respective hosts associated with them
 
 ### Changed
 - Using `URI.encode_www_form` to build URL parameters
