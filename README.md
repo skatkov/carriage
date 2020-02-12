@@ -27,7 +27,29 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+A lot of examples could be found [in tests](https://github.com/skatkov/carriage/blob/master/test/carriage_test.rb)
+
+There are basically two ways to use this gem `bare metal` and with `builder`. Let's start off with baremetal:
+
+### Bare metal
+```
+Carriage.call(:us, {AssociateTag:'tag', "OfferListingId.1": "B00WR23X5I", "Quantity.1": 1})
+```
+The only thing it will validate, is a presence of locale. All other parameters will be converted without any verification. So be carefull
+
+### Builder
+Library also offers a slightly simpler interface that tries to valide data.
+
+```
+items = [
+ {OfferListingId: '123123'}.
+ {ASIN: '1231234', quantity: 2}
+]
+
+Carriage.build(items, tag: 'my_attribution_tag', locale: :uk)
+```
+Every item should be a hash, with `ASIN` or `OfferListingId` keys provided. By default quantity is 1.
+Carriage.build also requires `:tag` attribute and defaults to `locale: :us` if nothing else was provided.
 
 ## Getting help
 
