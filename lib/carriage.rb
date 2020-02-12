@@ -29,7 +29,7 @@ module Carriage
 
     while index < items.size
       params << '&' if index > 0
-      params << "ASIN.#{index+1}=#{items[index][:asin]}&Quantity.#{index+1}=#{items[index][:quantity]}"
+      params << "ASIN.#{index+1}=#{items[index][:asin]}&Quantity.#{index+1}=#{items[index].fetch(:quantity, 1)}"
       index += 1
     end
 

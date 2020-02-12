@@ -15,6 +15,13 @@ class CarriageTest < Minitest::Test
     assert_equal expected, Carriage.build(items, TAG, KEY_ID)
   end
 
+  def test_without_quantity
+    expected = append_keys(prepend_url("ASIN.1=B00WR23X5I&Quantity.1=1&ASIN.2=B018YJYPTA&Quantity.2=1"))
+    items = [{asin: 'B00WR23X5I'}, {asin: 'B018YJYPTA'}]
+
+    assert_equal expected, Carriage.build(items, TAG, KEY_ID)
+  end
+
   def test_build_1
     expected = append_keys(prepend_url("ASIN.1=B00WR23X5I&Quantity.1=1"))
     items = [{asin: 'B00WR23X5I', quantity: 1}]
