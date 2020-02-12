@@ -4,6 +4,7 @@ Carriage is a Ruby wrapper to [Amazon Product Advertising API 5.0 - Cart Form](h
 
 To use this gem, you need to have Amazon **AssociateTag**, so don't forget to [register first](https://webservices.amazon.com/paapi5/documentation/register-for-pa-api.html) with Amazon Associate program.
 
+Programmatic access to product data is out of scope for this gem, but I recommend to use [vacuum gem](https://github.com/hakanensari/vacuum) if there is such a need.
 
 ## Installation
 
