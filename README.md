@@ -1,8 +1,9 @@
 # Carriage
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/carriage`. To experiment with that code, run `bin/console` for an interactive prompt.
+Carriage is a Ruby wrapper to [Amazon Product Advertising API 5.0 - Cart Form](https://webservices.amazon.com/paapi5/documentation/add-to-cart-form.html). This gem helps add any number of items to a customer's shopping cart and sending him to Amazon website to complete his order. 
 
-TODO: Delete this and the text above, and describe your gem
+To use this gem, you need to have Amazon **AssociateTag**, so don't forget to [register first](https://webservices.amazon.com/paapi5/documentation/register-for-pa-api.html) with Amazon Associate program.
+
 
 ## Installation
 

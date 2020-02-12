@@ -6,16 +6,16 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Stanislav (Stas) Katkov"]
   spec.email         = ["sk@skylup.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = "Carriage is a Ruby wrapper to Amazon Product Advertising API 5.0 - Cart Form"
+  spec.description   = "This gem helps add any number of items to a customer's shopping cart and sending him to Amazon website to complete his order."
+  spec.homepage      = "https://www.github.com/skatkov/carriage"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
 
   spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "TODO: Put your gem's public repo URL here."
+  spec.metadata["source_code_uri"] = "https://www.github.com/skatkov/carriage"
   spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
 
   # Specify which files should be added to the gem when it is released.
