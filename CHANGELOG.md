@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+- Adding support for Amazon locales support
+
 ## [0.2.0]
 ### Added
 - Set default quantity for a product
