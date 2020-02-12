@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
 module Carriage
-  class Region
+  class Locale
     class NotFound < KeyError; end
 
-    HOSTS_AND_REGIONS = {
+    HOSTS = {
         au: 'https://www.amazon.com.au/gp/aws/cart/add.html',
         br: 'https://www.amazon.com.br/gp/aws/cart/add.html',
         ca: 'https://www.amazon.ca/gp/aws/cart/add.html',
@@ -22,14 +22,14 @@ module Carriage
         us: 'https://www.amazon.com/gp/aws/cart/add.html'
     }.freeze
 
-    private_constant :HOSTS_AND_REGIONS
+    private_constant :HOSTS
 
     attr_reader :host
 
-    def initialize(region)
-      @host = HOSTS_AND_REGIONS.fetch(region.to_sym.downcase)
+    def initialize(locale)
+      @host = HOSTS.fetch(locale.to_sym.downcase)
     rescue KeyError
-      raise NotFound, "region not found: :#{region}"
+      raise NotFound, "Locale not found: :#{locale}"
     end
   end
 end

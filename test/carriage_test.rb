@@ -42,16 +42,16 @@ class CarriageTest < Minitest::Test
     assert_nil Carriage.build(nil, tag: TAG, key_id: KEY_ID)
   end
 
-  def test_regions
+  def test_available_locales
     items = [{asin: 'B00WR23X5I', quantity: 1}]
 
-    assert Carriage.build(items, tag: TAG, region: :uk).start_with?('https://www.amazon.co.uk')
-    assert Carriage.build(items, tag: TAG, region: :in).start_with?('https://www.amazon.in')
+    assert Carriage.build(items, tag: TAG, locale: :uk).start_with?('https://www.amazon.co.uk')
+    assert Carriage.build(items, tag: TAG, locale: :in).start_with?('https://www.amazon.in')
   end
 
 
-  def test_verify_regions
-    assert_raises(Carriage::Region::NotFound) do
+  def test_verify_locale
+    assert_raises(Carriage::Locale::NotFound) do
       Carriage.call(:oo, {"ASIN.1": "B00WR23X5I", "Quantity.1": 1})
     end
   end

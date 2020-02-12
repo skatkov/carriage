@@ -1,13 +1,13 @@
 require 'carriage/version'
-require 'carriage/region'
+require 'carriage/locale'
 require 'uri'
 
 module Carriage
-  def self.call(region, params)
-    "#{Region.new(region).host}?#{URI.encode_www_form params}"
+  def self.call(locale, params)
+    "#{Locale.new(locale).host}?#{URI.encode_www_form params}"
   end
 
-  def self.build(items, tag:, key_id: nil, region: :us)
+  def self.build(items, tag:, key_id: nil, locale: :us)
     return nil if items.nil? || items.empty?
 
     params = {}
@@ -22,6 +22,6 @@ module Carriage
     params[:AssociateTag] = tag
     params[:AWSAccessKeyId] = key_id unless (key_id.nil? || key_id.empty?)
 
-    call(region, params)
+    call(locale, params)
   end
 end
