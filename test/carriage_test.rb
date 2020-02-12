@@ -34,6 +34,7 @@ class CarriageTest < Minitest::Test
 
     assert_equal expected, Carriage.build(items, TAG, nil)
     assert_equal expected, Carriage.build(items, TAG, "")
+    assert_equal expected, Carriage.build(items, TAG)
   end
 
   def test_zero
