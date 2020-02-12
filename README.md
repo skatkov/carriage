@@ -1,3 +1,4 @@
+[![Gem Version](https://badge.fury.io/rb/carriage.svg)](https://badge.fury.io/rb/carriage) 
 # Carriage
 
 Carriage is a Ruby wrapper to [Amazon Product Advertising API 5.0 - Cart Form](https://webservices.amazon.com/paapi5/documentation/add-to-cart-form.html). This gem helps add any number of items to a customer's shopping cart and sending him to Amazon website to complete his order. 
