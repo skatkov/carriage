@@ -23,6 +23,7 @@ module Carriage
 
   def self.build(items, tag, key_id)
     return nil if items.nil? || items.empty?
+    attribution_params = (key_id.nil? || key_id.empty?) ? "AssociateTag=#{tag}" : "AssociateTag=#{tag}&AWSAccessKeyId=#{key_id}"
 
     params = ""
     index = 0
@@ -33,10 +34,6 @@ module Carriage
       index += 1
     end
 
-    if key_id.nil? || key_id.empty?
-      "#{HOSTS_AND_REGIONS[:us]}?#{params}&AssociateTag=#{tag}"
-    else
-      "#{HOSTS_AND_REGIONS[:us]}?#{params}&AssociateTag=#{tag}&AWSAccessKeyId=#{key_id}"
-    end
+    "#{HOSTS_AND_REGIONS[:us]}?#{params}&#{attribution_params}"
   end
 end
