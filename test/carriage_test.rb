@@ -41,6 +41,13 @@ class CarriageTest < Minitest::Test
     assert_equal expected, Carriage.build(items, tag: TAG)
   end
 
+  def test_offer_listing_id
+    expected = append_keys(prepend_url("OfferListingId.1=B00WR23X5I&Quantity.1=1&ASIN.2=B018YJYPTA&Quantity.2=1"))
+    items = [{offerlistingid: 'B00WR23X5I', quantity: 1}, {asin: 'B018YJYPTA', quantity: 1}]
+
+    assert_equal expected, Carriage.build(items, tag: TAG, key_id: KEY_ID)
+  end
+
   def test_zero
     assert_nil Carriage.build({}, tag: TAG, key_id: KEY_ID)
     assert_nil Carriage.build(nil, tag: TAG, key_id: KEY_ID)
