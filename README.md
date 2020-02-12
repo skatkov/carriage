@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/skatkov/carriage.svg?branch=master)](https://travis-ci.org/skatkov/carriage)
 
 # Carriage
-Carriage is a Ruby wrapper to [Amazon Product Advertising API 5.0 - Cart Form](https://webservices.amazon.com/paapi5/documentation/add-to-cart-form.html). This gem helps add any number of items to a customer's shopping cart and sending him to Amazon website to complete his order. 
+Carriage is a Ruby micro-wrapper to [Amazon's Cart Form](https://webservices.amazon.com/paapi5/documentation/add-to-cart-form.html) functionality. Gem helps add any number of items to customer's shopping cart and direct him to Amazon website to complete order. 
 
 To use this gem, you need to have Amazon **AssociateTag**, so don't forget to [register first](https://webservices.amazon.com/paapi5/documentation/register-for-pa-api.html) with Amazon Associate program.
 
