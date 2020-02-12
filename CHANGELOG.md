@@ -5,8 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 
 ### Added
+- Using `URI.encode_www_form` to build URL parameters
+- `AWSAccessKeyId` is not a required argument
 - Set default quantity for a product
-- Write down regions and respective hosts associate with them
+- Write down regions and respective hosts associated with them
 
 ## [0.1.0]
 First public version, only focused on supporting one region - US.
