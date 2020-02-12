@@ -35,10 +35,10 @@ There are basically two ways to use this gem `bare metal` and with `builder`. Le
 ```
 Carriage.call(:us, {AssociateTag:'tag', "OfferListingId.1": "B00WR23X5I", "Quantity.1": 1})
 ```
-The only thing it will validate, is a presence of locale. All other parameters will be converted without any verification. So be carefull
+The only thing it will validate, is a presence of locale. All other parameters will be converted by `URI.encode_www_form` without any verification. Be carefull!
 
 ### Builder
-Library also offers a slightly simpler interface that tries to valide data.
+Library also offers a simpler interface that tries to valide data with convinince methods on top.
 
 ```
 items = [
@@ -48,8 +48,11 @@ items = [
 
 Carriage.build(items, tag: 'my_attribution_tag', locale: :uk)
 ```
-* Every item should be a hash, with `ASIN` or `OfferListingId` keys provided (case doesn't matter). By default quantity is 1 for every product, but you can provide any ther quantity parameter.
-* Carriage.build also requires `:tag` attribute and defaults to `locale: :us` if nothing else was provided.
+
+* Every item should be a hash, with `ASIN` or `OfferListingId` key provided (case-insesitive). By default quantity is 1, feel free to rewrite that. 
+* `Carriage.build` also requires `:tag` attribute (or `AssociateTag`)
+*  Defaults to `locale: :us`, if no other locale was provided.
+
 ### Locale
 All locale are based on a two letter country codes - **ISO 3166-1 alpha-2**. Here is an exact mapping:
 
