@@ -28,6 +28,10 @@ class CarriageTest < Minitest::Test
     assert_equal expected, Carriage.build(items, tag: TAG, key_id: KEY_ID)
   end
 
+  def test_missing_tag
+    assert_raises(ArgumentError) { Carriage.build([{asin: 'B00WR23X5I', quantity: 1}]) }
+  end
+
   def test_missing_key_id
     expected = prepend_url("ASIN.1=B00WR23X5I&Quantity.1=1&AssociateTag=#{TAG}")
     items = [{asin: 'B00WR23X5I', quantity: 1}]
