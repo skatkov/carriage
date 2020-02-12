@@ -8,7 +8,11 @@ module Carriage
         index = 0
 
         while index < items.size
-          params[:"ASIN.#{index + 1}"] = items[index][:asin]
+          if items[index][:asin]
+            params[:"ASIN.#{index + 1}"] = items[index][:asin]
+          else
+            params[:"OfferListingId.#{index + 1}"] = items[index][:offerlistingid]
+          end
           params[:"Quantity.#{index + 1}"] = items[index].fetch(:quantity, 1)
           index += 1
         end
