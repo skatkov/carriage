@@ -50,6 +50,9 @@ Carriage.build(items, tag: 'my_attribution_tag', locale: :uk)
 ```
 * Every item should be a hash, with `ASIN` or `OfferListingId` keys provided (case doesn't matter). By default quantity is 1 for every product, but you can provide any ther quantity parameter.
 * Carriage.build also requires `:tag` attribute and defaults to `locale: :us` if nothing else was provided.
+### Locale
+All locale are based on a two letter country codes - **ISO 3166-1 alpha-2**. Here is an exact mapping:
+https://github.com/skatkov/carriage/blob/master/lib/carriage/locale.rb#L7-L23
 
 ## Getting help
 
