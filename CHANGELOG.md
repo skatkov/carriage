@@ -4,6 +4,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+### Added
+- Project logo
+
+### Changed
+- Improve gem description
+- Clean-up Gemfile
+- Simplified Locale error handling
+
 ## [1.0]
 
 - Finalize documentation
