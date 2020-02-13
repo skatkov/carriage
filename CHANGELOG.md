@@ -4,12 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
-##[1.0]
+## [1.0]
 
 - Finalize documentation
 - Release 1 version to show completeness of api
 
-##[0.3.0]
+## [0.3.0]
 
 ### Added
 - Support for Amazon locales
