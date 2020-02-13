@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = "Carriage is a Ruby micro-wrapper to Amazon's Cart Form functionality (part of Product Advertising API v5.0)"
   spec.description   = "Gem helps add any number of items to customer's shopping cart and direct him to Amazon website to complete order."
-  spec.homepage      = "https://github.com/skatkov/carriage"
+  spec.homepage      = "https://skatkov.github.io/carriage/"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
 
