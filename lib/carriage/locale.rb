@@ -27,9 +27,9 @@ module Carriage
     attr_reader :host
 
     def initialize(locale)
-      @host = HOSTS.fetch(locale.to_sym.downcase)
-    rescue KeyError
-      raise NotFound, "Locale not found: :#{locale}"
+      @host = HOSTS.fetch(locale.to_sym.downcase) do |_|
+        raise NotFound, "Locale not found: :#{locale}"
+      end
     end
   end
 end
