@@ -55,9 +55,9 @@ items = [
 Carriage.build(items, tag: 'my_attribution_tag', locale: :uk)
 ```
 
-* Every item should be a hash, with `ASIN` or `ID` (short for `OfferListingId`) key provided. 
+* Every item should be a hash, with `ASIN` or `ID` (short for `OfferListingId`) key provided. All keys are _case insensitive_.
 * By default quantity is 1, feel free to rewrite that. 
-* `Carriage.build` also requires `:tag` attribute (or `AssociateTag`)
+* `Carriage.build` also requires `:tag` attribute (short for `AssociateTag`)
 *  Defaults to `locale: :us`, if no other locale was provided.
 
 ### Locale
