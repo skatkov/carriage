@@ -9,8 +9,10 @@ module Carriage
 
           if item[:ASIN]
             params[:"ASIN.#{index + 1}"] = item[:ASIN]
+          elsif item[:ID]
+            params[:"OfferListingId.#{index + 1}"] = item[:ID]
           else
-            params[:"OfferListingId.#{index + 1}"] = item[:OFFERLISTINGID]
+            next
           end
           params[:"Quantity.#{index + 1}"] = item.fetch(:QUANTITY, 1)
         end

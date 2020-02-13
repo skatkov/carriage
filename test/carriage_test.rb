@@ -34,7 +34,7 @@ class CarriageTest < Minitest::Test
 
   def test_custom_quantity
     expected = append_keys(prepend_url("ASIN.1=B00WR23X5I&Quantity.1=2&OfferListingId.2=B018YJYPTA&Quantity.2=2"))
-    items = [{asin: 'B00WR23X5I', quantity: 2}, {offerlistingid: 'B018YJYPTA', quantity: 2}]
+    items = [{asin: 'B00WR23X5I', quantity: 2}, {id: 'B018YJYPTA', quantity: 2}]
 
     assert_equal expected, Carriage.build(items, tag: TAG, key_id: KEY_ID)
 
@@ -51,7 +51,7 @@ class CarriageTest < Minitest::Test
 
   def test_offer_listing_id
     expected = append_keys(prepend_url("OfferListingId.1=B00WR23X5I&Quantity.1=1&OfferListingId.2=B018YJYPTA&Quantity.2=1"))
-    items = [{offerlistingid: 'B00WR23X5I', quantity: 1}, {OfferListingId: 'B018YJYPTA', quantity: 1}]
+    items = [{id: 'B00WR23X5I', quantity: 1}, {Id: 'B018YJYPTA', quantity: 1}]
 
     assert_equal expected, Carriage.build(items, tag: TAG, key_id: KEY_ID)
   end
