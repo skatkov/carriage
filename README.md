@@ -39,7 +39,12 @@ There are basically two ways to use this gem `bare metal` and with `builder`. Le
 
 ### Bare metal
 ```
-Carriage.call(:us, {AssociateTag:'tag', "OfferListingId.1": "B00WR23X5I", "Quantity.1": 1})
+Carriage.call(:us, {
+  AssociateTag:'tag', 
+  "OfferListingId.1": "B00WR23X5I", 
+  "Quantity.1": 1 
+ }
+)
 ```
 The only thing it will validate, is a presence of locale. All other parameters will be converted by `URI.encode_www_form` without any verification. Be carefull!
 
