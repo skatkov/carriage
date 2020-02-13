@@ -49,8 +49,8 @@ class CarriageTest < Minitest::Test
   end
 
   def test_zero
-    assert_nil Carriage.build({}, tag: TAG, key_id: KEY_ID)
-    assert_nil Carriage.build(nil, tag: TAG, key_id: KEY_ID)
+    refute_nil Carriage.build({}, tag: TAG, key_id: KEY_ID)
+    refute_nil Carriage.build(nil, tag: TAG, key_id: KEY_ID)
   end
 
   def test_available_locales
