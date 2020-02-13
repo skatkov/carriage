@@ -32,6 +32,14 @@ class CarriageTest < Minitest::Test
     assert_raises(ArgumentError) { Carriage.build([{asin: 'B00WR23X5I', quantity: 1}]) }
   end
 
+  def test_custom_quantity
+    expected = append_keys(prepend_url("ASIN.1=B00WR23X5I&Quantity.1=2&OfferListingId.2=B018YJYPTA&Quantity.2=2"))
+    items = [{asin: 'B00WR23X5I', quantity: 2}, {offerlistingid: 'B018YJYPTA', quantity: 2}]
+
+    assert_equal expected, Carriage.build(items, tag: TAG, key_id: KEY_ID)
+
+  end
+
   def test_missing_key_id
     expected = prepend_url("ASIN.1=B00WR23X5I&Quantity.1=1&AssociateTag=#{TAG}")
     items = [{asin: 'B00WR23X5I', quantity: 1}]
