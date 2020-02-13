@@ -48,14 +48,15 @@ Library also offers a simpler interface that tries to valide data with convininc
 
 ```
 items = [
- {OfferListingId: '123123'}.
+ {Id: '123123'}.
  {ASIN: '1231234', quantity: 2}
 ]
 
 Carriage.build(items, tag: 'my_attribution_tag', locale: :uk)
 ```
 
-* Every item should be a hash, with `ASIN` or `OfferListingId` key provided (case-insesitive). By default quantity is 1, feel free to rewrite that. 
+* Every item should be a hash, with `ASIN` or `ID` (short for `OfferListingId`) key provided. 
+* By default quantity is 1, feel free to rewrite that. 
 * `Carriage.build` also requires `:tag` attribute (or `AssociateTag`)
 *  Defaults to `locale: :us`, if no other locale was provided.
 
