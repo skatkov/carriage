@@ -3,7 +3,9 @@
 [![Build Status](https://travis-ci.org/skatkov/carriage.svg?branch=master)](https://travis-ci.org/skatkov/carriage)
 
 # Carriage
-![carriage project logo](vendor/logo.jpg)
+<p align="center">
+  <img src="./vendor/logo.jpg" alt="Carriage project logo" width="400">
+</p>
 
 Carriage is a Ruby micro-wrapper to [Amazon's Cart Form](https://webservices.amazon.com/paapi5/documentation/add-to-cart-form.html) functionality. Gem helps add any number of items to customer's shopping cart and direct him to Amazon website to complete order. 
 
