@@ -4,6 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.2.0]
+### Breaking change
+- hash now accepts :id key, but doesn't accept :OfferListingId anymore.
+
+### Added
+- test to verify that quantity could be set
+
 ## [1.1.1]
 ### Added
 - Project website
