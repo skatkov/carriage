@@ -13,6 +13,8 @@ To use this gem, you will eventually require Amazon's **AssociateTag**, so consi
 
 Programmatic access to product data is out of scope for this gem, but I recommend to use [vacuum gem](https://github.com/hakanensari/vacuum) if there is such a need.
 
+[Battle tested at aShop](https://www.ashop.co/?utm_source=carriage-gem)
+
 ## Installation
 
 Add this line to your application's Gemfile:
