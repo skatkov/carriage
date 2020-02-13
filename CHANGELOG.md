@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+
+## [1.1.0]
 ### Added
 - Project logo
 
@@ -11,8 +13,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Improve gem description
 - Clean-up Gemfile
 - Simplified Locale error handling
+- Refactoring 
 
-## [1.0]
+## [1.0.0]
 
 - Finalize documentation
 - Release 1 version to show completeness of api
