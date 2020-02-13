@@ -75,6 +75,8 @@ https://github.com/skatkov/carriage/blob/master/lib/carriage/locale.rb#L7-L23
 * Ask specific questions about the API on the [Amazon forum](https://forums.aws.amazon.com/forum.jspa?forumID=9).
 * Report bugs and discuss potential features in [GitHub issues](https://github.com/skatkov/carriage/issues).
 
+## Credits
+Logo was done by [Max Kazmin](https://dribbble.com/maxpainter)
 
 ## License
 
