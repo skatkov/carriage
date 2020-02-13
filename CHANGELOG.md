@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.1.1]
+### Added
+- Project website
 
 ## [1.1.0]
 ### Added
