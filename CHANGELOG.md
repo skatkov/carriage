@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.2.1]
+- Rollback some changes in gemspec
+
 ## [1.2.0]
 ### Breaking change
 - hash now accepts :id key, but doesn't accept :OfferListingId anymore.
