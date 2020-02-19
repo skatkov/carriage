@@ -7,7 +7,7 @@
   <img src="./vendor/logo.jpg" alt="Carriage project logo" width="400">
 </p>
 
-Carriage is a Ruby micro-wrapper to [Amazon's Cart Form](https://webservices.amazon.com/paapi5/documentation/add-to-cart-form.html) functionality. Gem helps add any number of items to customer's shopping cart and direct him to Amazon website to complete order. 
+Carriage is a Ruby wrapper to [Amazon's Cart Form](https://webservices.amazon.com/paapi5/documentation/add-to-cart-form.html) functionality. Gem helps add any number of items to customer's shopping cart and direct him to Amazon website to complete order. 
 
 To use this gem, you will eventually require Amazon's **AssociateTag**, so consider to [register first](https://webservices.amazon.com/paapi5/documentation/register-for-pa-api.html) with Amazon Associate program and become more familiar with it.
 
