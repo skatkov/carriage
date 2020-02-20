@@ -17,8 +17,8 @@ module Carriage
           params[:"Quantity.#{index + 1}"] = item.fetch(:QUANTITY, 1)
         end
 
-        params[:AssociateTag] = tag unless (tag.nil? || tag.empty?)
-        params[:AWSAccessKeyId] = key_id unless (key_id.nil? || key_id.empty?)
+        params[:AssociateTag] = tag unless tag.nil? || tag.empty?
+        params[:AWSAccessKeyId] = key_id unless key_id.nil? || key_id.empty?
 
         Carriage.call(locale, params)
       end

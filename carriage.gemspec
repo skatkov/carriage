@@ -1,15 +1,15 @@
-require_relative 'lib/carriage/version'
+require_relative "lib/carriage/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "carriage"
-  spec.version       = Carriage::VERSION
-  spec.authors       = ["Stanislav (Stas) Katkov"]
-  spec.email         = ["sk@skylup.com"]
+  spec.name = "carriage"
+  spec.version = Carriage::VERSION
+  spec.authors = ["Stanislav (Stas) Katkov"]
+  spec.email = ["sk@skylup.com"]
 
-  spec.summary       = "Carriage is a Ruby micro-wrapper to Amazon's Cart Form functionality (part of Product Advertising API v5.0)"
-  spec.description   = "Gem helps add any number of items to customer's shopping cart and direct him to Amazon website to complete order."
-  spec.homepage      = "https://skatkov.github.io/carriage/"
-  spec.license       = "MIT"
+  spec.summary = "Carriage is a Ruby micro-wrapper to Amazon's Cart Form functionality (part of Product Advertising API v5.0)"
+  spec.description = "Gem helps add any number of items to customer's shopping cart and direct him to Amazon website to complete order."
+  spec.homepage = "https://skatkov.github.io/carriage/"
+  spec.license = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
 
   spec.metadata["homepage_uri"] = spec.homepage
@@ -18,15 +18,16 @@ Gem::Specification.new do |spec|
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
-  spec.files = Dir.chdir(File.expand_path('..', __FILE__)) do
+  spec.files = Dir.chdir(File.expand_path("..", __FILE__)) do
     `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   end
 
-  spec.bindir        = "exe"
-  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
+  spec.bindir = "exe"
+  spec.executables = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_development_dependency 'rake'
-  spec.add_development_dependency 'minitest'
-  spec.add_development_dependency 'm'
+  spec.add_development_dependency "rake"
+  spec.add_development_dependency "minitest"
+  spec.add_development_dependency "m"
+  spec.add_development_dependency "standard"
 end
