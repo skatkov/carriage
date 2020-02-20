@@ -5,6 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 
 ## [1.3]
+## Add
+- Code-style now adheres to standard gem 
+
 ## Change
 - AssociateTag is not required for Carriage.build anymore
 
