@@ -1,7 +1,7 @@
 module Carriage
   class Builder
     class << self
-      def call(items, tag:, key_id: nil, locale: :us)
+      def call(items, tag: nil, key_id: nil, locale: :us)
         params = {}
 
         wrap(items).each_with_index do |obj, index|
@@ -17,7 +17,7 @@ module Carriage
           params[:"Quantity.#{index + 1}"] = item.fetch(:QUANTITY, 1)
         end
 
-        params[:AssociateTag] = tag
+        params[:AssociateTag] = tag unless (tag.nil? || tag.empty?)
         params[:AWSAccessKeyId] = key_id unless (key_id.nil? || key_id.empty?)
 
         Carriage.call(locale, params)
