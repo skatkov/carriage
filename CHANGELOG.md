@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.3]
+## Change
+- AssociateTag is not required for Carriage.build anymore
+
 ## [1.2.1]
 - Rollback some changes in gemspec
 
