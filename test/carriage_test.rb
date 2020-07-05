@@ -67,6 +67,14 @@ class CarriageTest < Minitest::Test
     assert Carriage.build(items, tag: TAG, locale: :in).start_with?("https://www.amazon.in")
   end
 
+  def test_normalize_locales
+    items = [{asin: "B00WR23X5I", quantity: 1}]
+
+    assert Carriage.build(items, tag: TAG, locale: 'UK').start_with?("https://www.amazon.co.uk")
+    assert Carriage.build(items, tag: TAG, locale: :IN).start_with?("https://www.amazon.in")
+
+  end
+
   def test_verify_locale
     assert_raises(Carriage::Locale::NotFound) do
       Carriage.call(:oo, {"ASIN.1": "B00WR23X5I", "Quantity.1": 1})

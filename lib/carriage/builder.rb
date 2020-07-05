@@ -19,8 +19,8 @@ module Carriage
 
         params[:AssociateTag] = tag unless tag.nil? || tag.empty?
         params[:AWSAccessKeyId] = key_id unless key_id.nil? || key_id.empty?
-
-        Carriage.call(locale, params)
+        
+        Carriage.call(locale.downcase.to_sym, params)
       end
 
       private
