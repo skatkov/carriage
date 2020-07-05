@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.3.1]
+## Add
+- Normalize locale to expected format
+
 ## [1.3.0]
 ## Add
 - Code-style now adheres to standard gem 
